@@ -293,66 +293,19 @@ Direct Frequency Entry
 
 The original FL701 VFD remains installed.
 
-Display content is generated entirely by the ESP32.
-
-The ESP32 controls:
-
-```text
-16 Grid Outputs
-
-37 Segment Outputs
-```
-
-using a new VFD driver stage while reusing the original display glass and power supply.
-
-This allows the original Sony appearance to be preserved.
+Display content is generated entirely by the ESP32 by sending RDS data to the RDS decoder (IC801).
 
 ---
 
-# Front Panel Integration
-
-## Keypad
-
-The existing resistor ladder network will be reused.
-
-Connection points:
-
-```text
-JW719
-
-JW720
-```
-
-These provide access to the two keypad resistor ladders and can be connected directly to ESP32 ADC inputs.
-
----
-
-## Rotary Encoder
-
-The original rotary encoder remains installed.
-
-Signals:
-
-```text
-R1
-
-R2
-```
-
-will be connected directly to the ESP32.
-
-The original tuning wheel therefore continues to function as intended.
-
----
 
 # Audio Path
 
 The ESP32 becomes responsible for:
 
-- Network connectivity
-- Station selection
+- Network connectivity (wifi / ethernet)
+- Station selection (Mhz -> Internet Radio mapping)
 - Audio streaming
-- Metadata retrieval
+- Metadata retrieval (to send to RDS)
 
 Audio output can be provided by:
 
