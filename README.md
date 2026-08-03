@@ -321,7 +321,7 @@ I²S
     ↓
 External DAC
     ↓
-Original Sony Digital/Analog Outputs
+Original Sony Analog Outputs
 ```
 
 Future revisions may support:
