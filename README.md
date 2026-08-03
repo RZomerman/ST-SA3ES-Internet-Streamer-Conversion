@@ -1,493 +1,399 @@
-# Sony ST-SA3ES Internet Streamer Conversion
+# Sony ST-SA3ES Internet Tuner Replacement Project
 
 ## Design Proposal v1.0
 
-### Project Objective
+### Design Philosophy
 
-The goal of this project is to convert a Sony ST-SA3ES ES-series tuner into a modern Internet radio and music streamer while preserving:
+This project is not intended to convert the Sony ST-SA3ES into a generic network streamer.
 
-- Original Sony ES enclosure
-- Original VFD display (FL701)
-- Original front-panel buttons
+Instead, the objective is to preserve the original tuner experience while replacing the radio receiver with a modern Internet-radio capable platform.
+
+From the user's perspective, the unit should continue to behave like a Sony ES tuner.
+
+The tuning knob, frequency display, presets, memory functions and station browsing remain intact.
+
+The only difference is that the received stations no longer originate from FM or AM broadcasts.
+
+Instead, the "stations" are Internet radio streams managed by an ESP32.
+
+The goal is that a user unfamiliar with the modification should still believe they are operating a traditional tuner.
+
+---
+
+# Project Objectives
+
+Preserve:
+
+- Original Sony ES chassis
+- Original front panel
+- Original FL701 VFD display
+- Original keypad
 - Original rotary tuning encoder
 - Original power supply
-- Original aesthetics and user experience
+- Original tuner-style user experience
 
-The original FM/AM tuner circuitry will be bypassed and replaced by an ESP32-based controller connected to Volumio running on a Raspberry Pi.
+Replace:
 
-The philosophy is simple:
+- FM tuner circuitry
+- AM tuner circuitry
+- IF processing
+- RDS decoder
+- RF front end
 
-> Keep everything the user touches. Replace everything related to receiving radio broadcasts.
+Add:
+
+- ESP32-S3 controller
+- Wi-Fi networking
+- Internet radio station database
+- Metadata processing
+- Modern audio playback
 
 ---
 
-# High-Level Architecture
+# System Architecture
 
 ```text
-                    Raspberry Pi
-                       Volumio
-                          │
-                    MQTT / Serial
-                          │
-                          ▼
-                     ESP32-S3
-                          │
-          ┌───────────────┼───────────────┐
-          │               │               │
-          ▼               ▼               ▼
+                Internet Radio
 
-      Keypad        Rotary Encoder     VFD Driver
-                                          │
-                                          ▼
-                                    FL701 Display
+                       │
+                       ▼
+
+                 Wi-Fi Network
+
+                       │
+                       ▼
+
+                    ESP32-S3
+
+                       │
+        ┌──────────────┼──────────────┐
+        │              │              │
+        ▼              ▼              ▼
+
+    FL701 VFD      Keypad        Rotary Encoder
+     Display
 ```
 
-The ESP32 becomes the front-panel controller.
-
-## Responsibilities
-
-| Function | Handled By |
-|-----------|-----------|
-| Streaming | Volumio |
-| Audio output | Volumio |
-| Front-panel buttons | ESP32 |
-| Rotary encoder | ESP32 |
-| Display updates | ESP32 |
-| Menu navigation | ESP32 |
-| MQTT / Serial bridge | ESP32 |
+The ESP32 replaces the complete tuner subsystem while maintaining all user interaction through the original Sony hardware.
 
 ---
 
-# Existing Display Architecture
+# Operating Concept
 
-The ST-SA3ES uses a multiplexed Vacuum Fluorescent Display (VFD), designated FL701.
+## Original Sony Operation
 
-The display consists of:
+```text
+User Turns Tuning Knob
+
+      88.50 MHz
+      88.60 MHz
+      88.70 MHz
+
+Sony Receives FM Station
+```
+
+---
+
+## New Operation
+
+```text
+User Turns Tuning Knob
+
+      88.50 MHz
+      88.60 MHz
+      88.70 MHz
+
+ESP32 Selects
+Internet Radio Stations
+```
+
+From the user's perspective nothing changes.
+
+The display continues to show a frequency.
+
+The tuning knob continues to browse stations.
+
+Presets continue to operate normally.
+
+---
+
+# Virtual Frequency Plan
+
+The displayed frequency becomes a station identifier.
+
+Example:
+
+| Displayed Frequency | Station |
+|---------------------|----------|
+| 88.50 MHz | Radio Paradise |
+| 88.55 MHz | NPO Radio 1 |
+| 88.60 MHz | NPO Radio 2 |
+| 88.65 MHz | Sky Radio |
+| 88.70 MHz | BBC Radio 1 |
+| 88.75 MHz | BBC Radio 2 |
+
+The station database is maintained by the ESP32.
+
+No actual RF tuning occurs.
+
+---
+
+# Tuning Behaviour
+
+The original tuning encoder remains the primary navigation method.
+
+## Clockwise
+
+```text
+88.50
+88.55
+88.60
+88.65
+```
+
+Move to next station.
+
+## Counter Clockwise
+
+```text
+88.65
+88.60
+88.55
+88.50
+```
+
+Move to previous station.
+
+The interaction remains completely natural to anyone familiar with a tuner.
+
+---
+
+# Presets
+
+Preset operation remains identical to the original Sony implementation.
+
+Users continue to store and recall stations using:
+
+```text
+MEMORY
+
+SHIFT
+
+1-9
+```
+
+For example:
+
+```text
+Preset 1
+Radio Paradise
+
+Preset 2
+NPO Radio 2
+
+Preset 3
+BBC Radio 1
+```
+
+The ESP32 simply associates preset numbers with Internet radio streams.
+
+---
+
+# RDS Replacement
+
+The original RDS functionality is repurposed to display Internet metadata.
+
+## Original
+
+```text
+NPO RADIO
+
+TOP 40
+```
+
+## New
+
+```text
+RADIO PARADISE
+
+Pink Floyd
+Comfortably Numb
+```
+
+or
+
+```text
+BBC RADIO 2
+
+Queen
+Innuendo
+```
+
+The large dot-matrix area of the FL701 display is ideal for scrolling artist and track information.
+
+---
+
+# Numeric Keypad
+
+The original numeric keypad remains functional.
+
+The user may directly enter a virtual frequency.
+
+Example:
+
+```text
+10130
+```
+
+Result:
+
+```text
+101.30 MHz
+```
+
+The ESP32 translates:
+
+```text
+101.30 MHz
+        ↓
+Station Database Lookup
+        ↓
+Classic Rock Radio
+```
+
+The display continues to show the entered frequency, preserving the tuner experience.
+
+---
+
+# TUNE MODE
+
+The existing TUNE MODE button can be repurposed.
+
+## Preset Mode
+
+```text
+Browse Stored Presets
+```
+
+## Station Mode
+
+```text
+Browse Entire Station Database
+```
+
+## Search Mode
+
+```text
+Direct Frequency Entry
+```
+
+---
+
+# Display System
+
+The original FL701 VFD remains installed.
+
+Display content is generated entirely by the ESP32.
+
+The ESP32 controls:
 
 ```text
 16 Grid Outputs
+
 37 Segment Outputs
 ```
 
-Total:
+using a new VFD driver stage while reusing the original display glass and power supply.
 
-```text
-53 outputs
-```
-
-The original display is driven directly by the NEC μPD780205 controller (IC701).
-
-Important observations:
-
-```text
-IC701 Pin 79
-VLOAD = -30V
-```
-
-The display board already receives:
-
-```text
-+5V
--30V
-GND
-```
-
-through connector CNP701.
-
-Therefore the conversion can likely reuse the existing Sony display power supply without generating additional high-voltage rails.
+This allows the original Sony appearance to be preserved.
 
 ---
 
-# Display Replacement Strategy
-
-## Original Sony Design
-
-```text
-IC701
- ├── G1..G16
- └── P1..P37
-
-      │
-      ▼
-
-    FL701
-```
-
-The original μPD780205 integrates:
-
-- Main control processor
-- VFD display driver
-
-Because of this, there is no external display driver IC available for reuse.
-
----
-
-## Proposed New Design
-
-```text
-ESP32
-   │
-   SPI
-   │
-   ▼
-
-HV Driver Chain
-
-   │
-   ├── G1..G16
-   └── P1..P37
-
-   ▼
-
- FL701
-```
-
-The ESP32 maintains a framebuffer and continuously scans the display.
-
-Benefits:
-
-- No need to emulate Sony firmware
-- Complete control over display contents
-- Menu system can be redesigned
-- Track information can be displayed
-- Artist information can be displayed
-- Station names can be displayed
-- Scrolling text becomes possible
-- Future features remain open
-
----
-
-# Why Not Reuse The Original Display Driver?
-
-The display driver functionality is integrated into IC701.
-
-Replacing IC701 entirely would require emulating:
-
-- System controller
-- Tuner control
-- Button decoding
-- Encoder decoding
-- Display refresh
-
-A cleaner approach is:
-
-```text
-Leave FL701 in place
-
-Replace display control logic
-with a dedicated ESP32 + HV driver
-```
-
-The ESP32 will directly control:
-
-```text
-G1..G16
-P1..P37
-```
-
-through a modern VFD driver stage.
-
----
-
-# Front Panel Buttons
-
-Sony implemented the front panel using two resistor ladders.
-
-## Key Ladder 1
-
-```text
-SHIFT
-1
-2
-3
-4
-5
-6
-7
-8
-9
-0
-ENTER
-```
-
-## Key Ladder 2
-
-```text
-DISPLAY
-TA
-NEWS/INFO
-PTY
-ANTENNA
-FM MODE
-BAND
-MEMORY
-CHARACTER
-MENU
-RETURN
-TUNE MODE
-```
-
-Each ladder terminates at a jumper on the display board.
-
-```text
-JW719
-JW720
-```
-
----
-
-# Proposed Keypad Connection
-
-Remove:
-
-```text
-JW719
-JW720
-```
-
-These become the interface points to the ESP32.
-
-```text
-JW719 → ESP32 ADC1
-
-JW720 → ESP32 ADC2
-
-GND   → ESP32 GND
-```
-
-The original Sony resistor values are retained.
-
-Benefits:
-
-- No PCB trace cutting
-- Original switches remain untouched
-- Fully reversible modification
-- Minimal soldering
-
-Optional filtering:
-
-```text
-ADC
- │
-100nF
- │
-GND
-```
-
-for stable readings.
-
----
-
-# Rotary Encoder
-
-The ST-SA3ES uses a rotary encoder labelled:
-
-```text
-RV701
-```
-
-with outputs:
-
-```text
-R1
-R2
-```
-
-These connect directly to IC701.
-
-The encoder is expected to be a standard quadrature device.
-
-## Proposed Wiring
-
-```text
-Encoder A → ESP32 GPIO
-
-Encoder B → ESP32 GPIO
-
-GND → ESP32 GND
-```
-
-No active components are expected to be required.
-
----
-
-# User Interface Proposal
-
-The front panel already contains sufficient controls to operate Volumio without a smartphone.
-
----
-
-## Playback Mode
-
-```text
-Encoder CW
-    Next Track
-
-Encoder CCW
-    Previous Track
-
-ENTER
-    Play / Pause
-
-1-9
-    Favourite Stations
-
-DISPLAY
-    Change Display Screen
-```
-
----
-
-## Menu Mode
-
-```text
-MENU
-    Enter Menu
-
-Encoder
-    Navigate
-
-ENTER
-    Select
-
-RETURN
-    Back
-```
-
-This preserves the original Sony navigation concept:
-
-```text
-Turn = Navigate
-Enter = Select
-Return = Back
-```
-
----
-
-# Physical Integration Points
-
-The conversion intentionally minimizes modifications to the tuner.
-
----
-
-## Display Power
-
-Reuse the existing Sony display supply from:
-
-```text
-CNP701
-```
-
-Signals available:
-
-```text
-+5V
--30V
-GND
-```
-
----
+# Front Panel Integration
 
 ## Keypad
 
-Use:
+The existing resistor ladder network will be reused.
+
+Connection points:
 
 ```text
 JW719
+
 JW720
 ```
 
-as ADC inputs.
+These provide access to the two keypad resistor ladders and can be connected directly to ESP32 ADC inputs.
 
 ---
 
 ## Rotary Encoder
 
-Connect at:
+The original rotary encoder remains installed.
+
+Signals:
 
 ```text
-RV701
+R1
+
+R2
 ```
 
-or directly on the IC701 input traces.
+will be connected directly to the ESP32.
+
+The original tuning wheel therefore continues to function as intended.
 
 ---
 
-## Display
+# Audio Path
 
-Retain:
+The ESP32 becomes responsible for:
+
+- Network connectivity
+- Station selection
+- Audio streaming
+- Metadata retrieval
+
+Audio output can be provided by:
 
 ```text
-FL701
+ESP32
+    ↓
+I²S
+    ↓
+External DAC
+    ↓
+Original Sony Digital/Analog Outputs
 ```
 
-No mechanical changes required.
+Future revisions may support:
+
+- SPDIF output
+- AES/EBU output
+- High-resolution streaming
+- Local media playback
 
 ---
 
-# Software Architecture
+# End Goal
 
-## ESP32 Responsibilities
+The completed unit should feel like an original Sony ST-SA3ES tuner.
 
-```text
-Read Keypad
+The user should:
 
-Read Encoder
+- Turn the tuning knob
+- Browse frequencies
+- Store presets
+- Recall presets
+- Read station information
+- View track metadata
 
-Receive Display Updates
+exactly as they would on the original tuner.
 
-Maintain Framebuffer
+The only difference is that every displayed "station" corresponds to an Internet radio stream rather than a terrestrial FM or AM broadcast.
 
-Refresh VFD
+In short:
 
-Communicate With Volumio
-```
-
----
-
-## Volumio Responsibilities
-
-```text
-Internet Radio
-
-Music Playback
-
-Spotify
-
-Tidal
-
-Library Browsing
-
-Playlists
-
-Audio Output
-```
-
----
-
-# Long-Term Goal
-
-The final unit should remain visually indistinguishable from a stock ST-SA3ES while functioning as a fully modern network streamer.
-
-Retained:
-
-- Sony ES chassis
-- Sony ES front panel
-- Original buttons
-- Original encoder
-- Original VFD display
-- Original power supply
-
-Added:
-
-- Internet radio
-- Spotify
-- Tidal
-- Network audio
-- Metadata display
-- Favourite presets
-- Playlists
-- MQTT integration
-- Future firmware extensibility
-
-The end result is a modern streamer that still feels and operates like an ES-series Sony component.
+> The ST-SA3ES remains a tuner.
+>
+> The tuner simply happens to tune the Internet instead of the airwaves.
