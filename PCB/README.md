@@ -9,12 +9,7 @@ CNP701 and CNP702 ESP32 Interface Pinout
 <colgroup>
 <col style="width: 100%" />
 </colgroup>
-<thead>
-<tr>
-<th><p><strong>Scope</strong></p>
-<p>This note maps the two 9-pin Sony interconnects to the ESP32 logic board. Pin numbering runs from pin 9 at the left side of each schematic connector to pin 1 at the right side. CNP702 pin 3 is not connected.</p></th>
-</tr>
-</thead>
+
 <tbody>
 </tbody>
 </table>
