@@ -217,13 +217,15 @@ Requirements:
 - Provide jumper or solder-bridge options to disconnect each emulated output during bring-up.
 - Each IC shall have a local 100 nF decoupling capacitor.
 
-At least four up-shift channels are needed:
+At least six up-shift channels are needed:
 
 ```text
 Channel 1 = D-IN
 Channel 2 = AST
 Channel 3 = SIG
 Channel 4 = ST
+Channel 5 = RDS-C
+Channel 6 = RDS-D
 ```
 
 A spare second device footprint may be included for future emulated outputs.
