@@ -132,9 +132,7 @@ These signals require 5 V to 3.3 V conversion:
 
 ```text
 GPIO8   = MUTE
-GPIO10  = RDS-C
-GPIO11  = RDS-D
-GPIO12  = BLN
+GPIO10  = BLN
 GPIO15  = CE
 GPIO16  = CLK
 GPIO17  = DATA
@@ -146,9 +144,11 @@ These signals require 3.3 V to 5 V conversion:
 
 ```text
 GPIO3   = AST
-GPIO9   = SIG
+GPIO9   = SIG/SI
 GPIO18  = D-IN
 GPIO46  = ST
+GPIO12  = RDS-C
+GPIO11  = RDS-D
 ```
 
 ## 6.3 Reserved Interface-ESP Pins
@@ -180,8 +180,6 @@ CLK
 DATA
 MUTE
 BLN
-RDS-C
-RDS-D
 ```
 
 Use a 5 V-input-tolerant 3.3 V logic buffer or translator. The design may use a suitable 74LVC-family device, provided that:
@@ -204,6 +202,8 @@ D-IN
 AST
 SIG
 ST
+RDS-C
+RDS-D
 ```
 
 Use 74AHCT125-family buffers powered from +5 V.
