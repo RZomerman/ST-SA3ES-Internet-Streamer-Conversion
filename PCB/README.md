@@ -109,9 +109,9 @@ All directions in this document are defined relative to the **Interface ESP** in
 | CLK | Controller clock | INPUT to ESP | 5 V to 3.3 V | GPIO16 | Front panel to down-shifter and ESP; optional pass-through during test mode |
 | DATA | LC72130 DI command data | INPUT to ESP | 5 V to 3.3 V | GPIO17 | Front panel to down-shifter and ESP; optional pass-through during test mode |
 | MUTE | Mute command from IC701 | INPUT to ESP | 5 V to 3.3 V | GPIO8 | Front panel to down-shifter and ESP; provide selectable pass-through |
-| BLN | High-blend command from IC701 | INPUT to ESP | 5 V to 3.3 V | GPIO12 | CN702/front-panel side to down-shifter and ESP; provide selectable pass-through to Q304/mainboard path |
-| RDS-C | RDS clock | INPUT to ESP | 5 V to 3.3 V | GPIO10 | Pass-through plus tap to ESP and test point |
-| RDS-D | RDS data | INPUT to ESP | 5 V to 3.3 V | GPIO11 | Pass-through plus tap to ESP and test point |
+| BLN | High-blend command from IC701 | INPUT to ESP | 5 V to 3.3 V | GPIO10 | CN702/front-panel side to down-shifter and ESP; provide selectable pass-through to Q304/mainboard path |
+| RDS-C | RDS clock | OUTPUT from ESP | 3.3 V to 5 V | GPIO11 | ESP through up-shifter and series resistor toward IC701 |
+| RDS-D | RDS data | OUTPUT from ESP | 3.3 V to 5 V | GPIO12 | ESP through up-shifter and series resistor toward IC701 |
 | D-IN | LC72130 DO/status emulation | OUTPUT from ESP | 3.3 V to 5 V | GPIO18 | ESP through up-shifter and series resistor toward IC701 |
 | AST | Auto-search/tuning status emulation | OUTPUT from ESP | 3.3 V to 5 V | GPIO3 | ESP through up-shifter and series resistor toward IC701 |
 | SIG | Signal-detect status emulation | OUTPUT from ESP | 3.3 V to 5 V | GPIO9 | ESP through up-shifter and series resistor toward IC701 |
