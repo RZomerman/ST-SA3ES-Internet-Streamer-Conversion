@@ -331,11 +331,10 @@ This prevents power conflicts between:
 
 and allows convenient programming without removing the boards.
 
+Each signal path has test points on the ingoing and outgoing sides. 
+
 ---
 
-# Project Philosophy
-
-The goal of this project is not to modernize the appearance of the ST-SA3ES.
 
 The goal is to preserve the complete Sony user experience while replacing the original RF tuner subsystem with a modern streaming architecture.
 
