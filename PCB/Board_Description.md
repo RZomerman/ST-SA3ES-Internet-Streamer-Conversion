@@ -75,18 +75,18 @@ Sony Front Panel
 | C4 | 100nF | SN74LVC245 decoupling | 3.3V |
 | C5 | 100nF | SN74AHCT125 decoupling | 5V |
 | C6 | 100nF | SN74AHCT125 decoupling | 5V |
-| R1 | 470Ω | D-IN | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R2 | 470Ω | RDS-C | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R3 | 470Ω | SI | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R4 | 470Ω | RDS-D | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R5 | 470Ω | AST | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R6 | 470Ω | ST | Output protection and current limiting from SN74AHCT125 to Sony logic |
-| R7 | 1kΩ | CE | Input protection for SN74LVC245 Sony → ESP32 translation |
-| R8 | 1kΩ | DATA | Input protection for SN74LVC245 Sony → ESP32 translation |
-| R9 | 1kΩ | CLK | Input protection for SN74LVC245 Sony → ESP32 translation |
-| R10 | 1kΩ | MUTE | Input protection for SN74LVC245 Sony → ESP32 translation |
-| R11 | 1kΩ | BLN | Input protection for SN74LVC245 Sony → ESP32 translation |
-| R12 | 10kΩ | AUDIO_READY | Pull-down resistor, default LOW state |
+| R1 | 470Ω | D-IN Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R2 | 470Ω | RDS-C Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R3 | 470Ω | SI Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R4 | 470Ω | RDS-D Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R5 | 470Ω | AST Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R6 | 470Ω | ST Output protection and current limiting from SN74AHCT125 to Sony logic | |
+| R7 | 1kΩ | CE Input protection for SN74LVC245 Sony → ESP32 translation | |
+| R8 | 1kΩ | DATA Input protection for SN74LVC245 Sony → ESP32 translation | |
+| R9 | 1kΩ | CLK Input protection for SN74LVC245 Sony → ESP32 translation | |
+| R10 | 1kΩ | MUTE Input protection for SN74LVC245 Sony → ESP32 translation | |
+| R11 | 1kΩ | BLN Input protection for SN74LVC245 Sony → ESP32 translation | |
+| R12 | 10kΩ | AUDIO_READY Pull-down resistor, default LOW state | |
 | JP01 | CE input Switch | Switch signal between ESP or original path |  |
 | JP02 | D-IN input Switch | Switch signal between ESP or original path |  |
 | JP03 | DATA input Switch | Switch signal between ESP or original path |  |
