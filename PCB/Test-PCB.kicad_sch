@@ -4509,16 +4509,6 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 175.26) (xy 119.38 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4235d574-8353-4071-a538-35bc7640d881")
-	)
-	(wire
-		(pts
 			(xy 201.93 132.08) (xy 210.82 132.08)
 		)
 		(stroke
@@ -4866,16 +4856,6 @@
 			(type default)
 		)
 		(uuid "70ac9d82-f8a2-46ae-95c4-c1304f6c206c")
-	)
-	(wire
-		(pts
-			(xy 181.61 175.26) (xy 170.18 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7176fc7e-6b9f-4483-80ed-1681bb234e21")
 	)
 	(wire
 		(pts
@@ -5629,6 +5609,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 175.26) (xy 181.61 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd3b42f7-a32f-4b1f-b93f-0e1338755448")
+	)
+	(wire
+		(pts
 			(xy 203.2 119.38) (xy 215.9 119.38)
 		)
 		(stroke
@@ -5957,6 +5947,26 @@
 		)
 		(uuid "ff620cdd-2f24-4fe4-accb-9ab4191af426")
 	)
+	(label "DATA"
+		(at 261.62 180.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0658e06c-da08-41af-b42c-afc8c5f57594")
+	)
+	(label "RDS-D"
+		(at 261.62 165.1 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "0a7dfe99-2c2b-429e-a2d4-a53247fa6a90")
+	)
 	(label "+5v"
 		(at 167.64 50.8 180)
 		(effects
@@ -5966,6 +5976,16 @@
 			(justify right bottom)
 		)
 		(uuid "196bdc13-d0e3-4111-b86d-728432d2b0e6")
+	)
+	(label "BLN"
+		(at 261.62 162.56 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1c4a67d0-dd7f-47ab-a020-aa7fc3e5885d")
 	)
 	(label "+3.3v"
 		(at 182.88 50.8 0)
@@ -6007,6 +6027,16 @@
 		)
 		(uuid "5c1620db-cbd1-4e25-ad5f-c166a220f8e9")
 	)
+	(label "CE"
+		(at 261.62 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6019f46e-dced-4fdb-82c9-281bc7af2269")
+	)
 	(label "RDS-D"
 		(at 213.36 204.47 180)
 		(effects
@@ -6016,6 +6046,16 @@
 			(justify right bottom)
 		)
 		(uuid "64f22894-5d1f-44bb-8ff8-5c4f5288d797")
+	)
+	(label "MUTE"
+		(at 261.62 157.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "66ff4b90-21c0-43ad-8c70-a19db4c37a01")
 	)
 	(label "AST"
 		(at 209.55 218.44 180)
@@ -6067,6 +6107,26 @@
 		)
 		(uuid "a3e52391-70ec-4725-a89f-b9233e1a5967")
 	)
+	(label "D-IN"
+		(at 261.62 182.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a5255585-00ab-4c9b-823e-5aecd6ceadb5")
+	)
+	(label "RDS-C"
+		(at 261.62 167.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bb555c96-d841-4a2d-8bde-0c7befcae225")
+	)
 	(label "5v"
 		(at 185.42 78.74 180)
 		(effects
@@ -6087,6 +6147,16 @@
 		)
 		(uuid "c11dd2bd-1fff-4b39-ba52-bf3eb7a44dc6")
 	)
+	(label "AST"
+		(at 261.62 144.78 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cba64ec0-86e2-4108-95c1-f051d3b393b8")
+	)
 	(label "CE"
 		(at 176.53 137.16 180)
 		(effects
@@ -6096,6 +6166,16 @@
 			(justify right bottom)
 		)
 		(uuid "d50a020b-a534-468c-8170-20ba9908f858")
+	)
+	(label "SI/SIG"
+		(at 261.62 160.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e206b543-b087-4a19-a047-21c3caaa34b8")
 	)
 	(label "D-IN"
 		(at 209.55 92.71 180)
@@ -6107,6 +6187,16 @@
 		)
 		(uuid "e3901c77-dc91-4551-a04e-819e5c37f4d7")
 	)
+	(label "ST"
+		(at 292.1 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3b3e5f7-c031-405a-8044-310abde755aa")
+	)
 	(label "DATA"
 		(at 176.53 139.7 180)
 		(effects
@@ -6117,8 +6207,18 @@
 		)
 		(uuid "e61e05fa-f0c1-4ba0-a4d0-255a3d6b697c")
 	)
+	(label "OPTICAL"
+		(at 261.62 115.57 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e9567d82-d8dd-47fc-8263-e3b7164b3fbb")
+	)
 	(label "5v"
-		(at 162.56 175.26 0)
+		(at 179.07 175.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6146,6 +6246,16 @@
 			(justify right bottom)
 		)
 		(uuid "f4c7ab9e-ed02-482d-9f10-9b4aecebe78d")
+	)
+	(label "CLK"
+		(at 261.62 177.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ff5ba321-6d01-4591-b3da-0322d1f23d62")
 	)
 	(symbol
 		(lib_id "Jumper:Jumper_3_Bridged12")
@@ -6829,10 +6939,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "203e3979-fcdd-4639-baec-0b45bef47290")
 		(property "Reference" "C5"
-			(at 173.99 170.1799 0)
+			(at 164.846 172.974 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6843,7 +6952,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 173.99 172.7199 0)
+			(at 161.798 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7003,7 +7112,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESP32-S3-MINI-1"
+		(property "Value" "ESP32-S3-AUDIO"
 			(at 279.0033 59.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7345,10 +7454,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2ceb4e6a-52ab-47c1-af83-5cc5109b7c11")
 		(property "Reference" "R4"
-			(at 172.72 198.12 90)
+			(at 172.72 201.93 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7358,7 +7466,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 172.72 200.66 90)
+			(at 172.72 207.01 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7815,7 +7923,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESP32-S3-MINI-1"
+		(property "Value" "ESP32-S3-CONTROL"
 			(at 279.0033 127 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8860,10 +8968,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5702fa58-1188-4f88-ba0c-f76628adc3d7")
 		(property "Reference" "R3"
-			(at 172.72 182.88 90)
+			(at 172.72 186.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8873,7 +8980,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 172.72 185.42 90)
+			(at 172.466 191.77 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10833,7 +10940,7 @@
 		(fields_autoplaced yes)
 		(uuid "e1c8a58f-c4a0-4e4d-991a-2332848b09e5")
 		(property "Reference" "J5"
-			(at 252.095 41.9099 90)
+			(at 251.46 41.9099 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10843,8 +10950,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SPDIF"
-			(at 252.095 44.4499 90)
+		(property "Value" "SPDIF-OUT"
+			(at 251.46 44.4499 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11405,10 +11512,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f7fce9f9-3c4a-4030-b988-9408484460f3")
 		(property "Reference" "R6"
-			(at 172.72 226.06 90)
+			(at 172.466 229.87 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11418,7 +11524,7 @@
 			)
 		)
 		(property "Value" "470Ω"
-			(at 172.72 228.6 90)
+			(at 172.974 234.95 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
