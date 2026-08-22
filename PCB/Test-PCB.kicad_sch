@@ -5268,6 +5268,16 @@
 	)
 	(wire
 		(pts
+			(xy 205.74 189.23) (xy 227.33 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3740409-c5f8-4929-a526-15fa1c33e0de")
+	)
+	(wire
+		(pts
 			(xy 226.06 58.42) (xy 215.9 58.42)
 		)
 		(stroke
@@ -5665,16 +5675,6 @@
 			(type default)
 		)
 		(uuid "d127534f-d95a-4f78-b9ad-13cd36f096ab")
-	)
-	(wire
-		(pts
-			(xy 205.74 189.23) (xy 227.33 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3abe3f1-c354-4809-9319-058e24da50fd")
 	)
 	(wire
 		(pts
@@ -6106,16 +6106,6 @@
 		)
 		(uuid "3ff4312d-2dd7-43aa-85f3-6e22209ffbc6")
 	)
-	(label "RDS-D"
-		(at 213.36 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "43c43d96-8741-44f1-a8d8-c8fb2f926e5b")
-	)
 	(label "FL"
 		(at 130.81 185.42 180)
 		(effects
@@ -6157,7 +6147,7 @@
 		(uuid "6019f46e-dced-4fdb-82c9-281bc7af2269")
 	)
 	(label "RDS-D"
-		(at 208.28 204.47 180)
+		(at 213.36 204.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6265,6 +6255,16 @@
 			(justify right bottom)
 		)
 		(uuid "8a97a84e-417d-4ac9-b449-d9352b57e29b")
+	)
+	(label "SI"
+		(at 208.28 189.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "957d1d7d-edeb-4eb4-b105-383ce97ee252")
 	)
 	(label "AUDIO_READY"
 		(at 261.62 113.03 180)
@@ -7000,7 +7000,7 @@
 		(dnp no)
 		(uuid "201123b0-7392-4677-a2a5-047731dbcf18")
 		(property "Reference" "J1"
-			(at 147.32 133.35 0)
+			(at 150.622 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
