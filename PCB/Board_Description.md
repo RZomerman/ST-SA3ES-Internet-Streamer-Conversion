@@ -90,7 +90,7 @@ Sony Front Panel
 
 ## Sony Supply
 
-The Sony logic board provides a regulated 5V supply.
+The Sony logic board provides a regulated 5V supply through pin 2 and 3 of CN701.
 
 This 5V rail is used as the primary power source for the interface PCB.
 
