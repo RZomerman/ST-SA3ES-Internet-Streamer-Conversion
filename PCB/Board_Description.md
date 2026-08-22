@@ -69,17 +69,17 @@ Sony Front Panel
 | C4 | 100nF | SN74LVC245 decoupling | 3.3V |
 | C5 | 100nF | SN74AHCT125 decoupling | 5V |
 | C6 | 100nF | SN74AHCT125 decoupling | 5V |
-| JP01 | CE input Switch | Switch signal between ESP or original path | 5V |
-| JP02 | D-IN input Switch | Switch signal between ESP or original path | 5V |
-| JP03 | DATA input Switch | Switch signal between ESP or original path | 5V |
-| JP04 | CLK input Switch | Switch signal between ESP or original path | 5V |
-| JP05 | RDS-C input Switch | Switch signal between ESP or original path | 5V |
-| JP06 | BLN input Switch | Switch signal between ESP or original path | 5V |
-| JP07 | ST input Switch | Switch signal between ESP or original path | 5V |
-| JP08 | RDS-D input Switch | Switch signal between ESP or original path | 5V |
-| JP09 | AST input Switch | Switch signal between ESP or original path | 5V |
-| JP10 | MUTE input Switch | Switch signal between ESP or original path | 5V |
-| JP11 | SI input Switch | Switch signal between ESP or original path | 5V |
+| JP01 | CE input Switch | Switch signal between ESP or original path |  |
+| JP02 | D-IN input Switch | Switch signal between ESP or original path |  |
+| JP03 | DATA input Switch | Switch signal between ESP or original path |  |
+| JP04 | CLK input Switch | Switch signal between ESP or original path |  |
+| JP05 | RDS-C input Switch | Switch signal between ESP or original path |  |
+| JP06 | BLN input Switch | Switch signal between ESP or original path |  |
+| JP07 | ST input Switch | Switch signal between ESP or original path |  |
+| JP08 | RDS-D input Switch | Switch signal between ESP or original path |  |
+| JP09 | AST input Switch | Switch signal between ESP or original path |  |
+| JP10 | MUTE input Switch | Switch signal between ESP or original path |  |
+| JP11 | SI input Switch | Switch signal between ESP or original path |  |
 | JP13 | ESP32 Audio Enable | Disconnect Audio ESP 3.3V during development | 3.3V |
 | JP14 | ESP32 Control Enable | Disconnect Control ESP 3.3V during development | 3.3V |
 | J5 | SPDIF Output | Optical digital audio output | 5V |
