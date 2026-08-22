@@ -61,8 +61,8 @@ Sony Front Panel
 | U1 | ESP32-S3-CONTROL | Sony interface processor | 3.3V |
 | U2 | ESP32-S3-AUDIO | Audio streaming processor | 3.3V |
 | U3 | SN74LVC245APW | Sony → ESP32 level translation | 3.3V |
-| U4 | MCP1825S-3302 | Main 3.3V regulator | 5V Input |
 | U3/U4 | SN74AHCT125PW | ESP32 → Sony level translation | 5V |
+| U5 | MCP1825S-3302 | Main 3.3V regulator | 5V Input |
 | C1 | 100uF | Main 3.3V bulk capacitor | 3.3V |
 | C2 | 10uF | MCP1825 input capacitor | 5V |
 | C3 | 22uF | MCP1825 output capacitor | 3.3V |
