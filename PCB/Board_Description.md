@@ -58,10 +58,17 @@ Sony Front Panel
 
 | Ref | Component | Purpose | Supply |
 |------|------|------|------|
+| J1 | to CN701 Front-Panel Side | Sony interface processor |  |
+| J2 | to CNP701 Mainboard Side | Sony interface processor |  |
+| J3 | to CN702 Front-Panel Side | Sony interface processor |  |
+| J4 | to CNP702 Mainboard Side | Sony interface processor |  |
+| J5 | SPDIF Output | Optical digital audio output | 5V |
+
 | U1 | ESP32-S3-CONTROL | Sony interface processor | 3.3V |
 | U2 | ESP32-S3-AUDIO | Audio streaming processor | 3.3V |
 | U3 | SN74LVC245APW | Sony → ESP32 level translation | 3.3V |
-| U3/U4 | SN74AHCT125PW | ESP32 → Sony level translation | 5V |
+| U3 | SN74AHCT125PW | ESP32 → Sony level translation #1 | 5V |
+| U4 | SN74AHCT125PW | ESP32 → Sony level translation #2 | 5V |
 | U5 | MCP1825S-3302 | Main 3.3V regulator | 5V Input |
 | C1 | 100uF | Main 3.3V bulk capacitor | 3.3V |
 | C2 | 10uF | MCP1825 input capacitor | 5V |
@@ -69,6 +76,18 @@ Sony Front Panel
 | C4 | 100nF | SN74LVC245 decoupling | 3.3V |
 | C5 | 100nF | SN74AHCT125 decoupling | 5V |
 | C6 | 100nF | SN74AHCT125 decoupling | 5V |
+| R1 | 470Ω | D-IN | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R2 | 470Ω | RDS-C | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R3 | 470Ω | SI | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R4 | 470Ω | RDS-D | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R5 | 470Ω | AST | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R6 | 470Ω | ST | Output protection and current limiting from SN74AHCT125 to Sony logic |
+| R7 | 1kΩ | CE | Input protection for SN74LVC245 Sony → ESP32 translation |
+| R8 | 1kΩ | DATA | Input protection for SN74LVC245 Sony → ESP32 translation |
+| R9 | 1kΩ | CLK | Input protection for SN74LVC245 Sony → ESP32 translation |
+| R10 | 1kΩ | MUTE | Input protection for SN74LVC245 Sony → ESP32 translation |
+| R11 | 1kΩ | BLN | Input protection for SN74LVC245 Sony → ESP32 translation |
+| R12 | 10kΩ | AUDIO_READY | Pull-down resistor, default LOW state |
 | JP01 | CE input Switch | Switch signal between ESP or original path |  |
 | JP02 | D-IN input Switch | Switch signal between ESP or original path |  |
 | JP03 | DATA input Switch | Switch signal between ESP or original path |  |
@@ -82,7 +101,7 @@ Sony Front Panel
 | JP11 | SI input Switch | Switch signal between ESP or original path |  |
 | JP13 | ESP32 Audio Enable | Disconnect Audio ESP 3.3V during development | 3.3V |
 | JP14 | ESP32 Control Enable | Disconnect Control ESP 3.3V during development | 3.3V |
-| J5 | SPDIF Output | Optical digital audio output | 5V |
+
 
 ---
 
