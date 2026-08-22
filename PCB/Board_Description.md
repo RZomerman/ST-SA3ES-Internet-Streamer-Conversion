@@ -63,7 +63,6 @@ Sony Front Panel
 | J3 | to CN702 Front-Panel Side | Sony interface processor |  |
 | J4 | to CNP702 Mainboard Side | Sony interface processor |  |
 | J5 | SPDIF Output | Optical digital audio output | 5V |
-
 | U1 | ESP32-S3-CONTROL | Sony interface processor | 3.3V |
 | U2 | ESP32-S3-AUDIO | Audio streaming processor | 3.3V |
 | U3 | SN74LVC245APW | Sony → ESP32 level translation | 3.3V |
