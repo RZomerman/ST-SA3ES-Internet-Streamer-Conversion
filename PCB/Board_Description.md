@@ -3,15 +3,6 @@
 
 ## Overview
 
-This PCB replaces the original Sony tuner electronics while preserving:
-
-- Original front panel
-- Original VFD display
-- Original buttons
-- Original indicators
-- Original enclosure
-- Original user experience
-
 The board is installed between the Sony mainboard and front panel using the existing CN701 and CN702 connectors.
 
 Two ESP32-S3 development boards are used:
@@ -33,19 +24,32 @@ Sony Mainboard
        |
  CN701 / CN702
        |
+       *--> CE
+       *--> DATA
+       *--> CLK
+       *--> BLN
+       *--> MUTE
+       |
        V
-ESP32-S3-CONTROL
-       |
-     UART
+ESP32-S3-CONTROL <--> UART <--> ESP32-S3-AUDIO
+       |                            |
+       |                            +--> WiFi
+       |                            +--> Internet Radio
+       |                            +--> Streaming Services
+       |                            +--> Metadata
+       |                            +--> Optical SPDIF Output
+       +--> RDS-C
+       +--> RDS-D
+       +--> SI
+       +--> AST
+       +--> ST
+       +--> D-IN
        |
        V
-ESP32-S3-AUDIO
+ CNP701 / CNP702
        |
-       +--> WiFi
-       +--> Internet Radio
-       +--> Streaming Services
-       +--> Metadata
-       +--> Optical SPDIF Output
+       V
+Sony Front Panel
 ```
 
 ---
@@ -235,36 +239,7 @@ Protection:
 
 - 470Ω series output resistors
 
----
-
-# CN701 Signal Mapping
-
-| Pin | Signal | Direction | Source | Destination | Voltage |
-|-------|-------|-------|-------|-------|-------|
-| 9 | CE | Sony → ESP32 | Sony Mainboard | ESP32-CONTROL | ~5V |
-| 8 | D-IN | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 7 | DATA | Sony → ESP32 | Sony Mainboard | ESP32-CONTROL | ~5V |
-| 6 | CLK | Sony → ESP32 | Sony Mainboard | ESP32-CONTROL | ~5V |
-| 5 | RDS-C | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 4 | RDS-D | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 3 | GND | Bidirectional | Shared | Shared | 0V |
-| 2 | GND | Bidirectional | Shared | Shared | 0V |
-| 1 | GND | Bidirectional | Shared | Shared | 0V |
-
----
-
-# CN702 Signal Mapping
-
-| Pin | Signal | Direction | Source | Destination | Voltage |
-|-------|-------|-------|-------|-------|-------|
-| 7 | SI | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 6 | RDS-D | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 5 | MUTE | Sony → ESP32 | Sony Mainboard | ESP32-CONTROL | ~5V |
-| 4 | AST | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 2 | ST | ESP32 → Sony | ESP32-CONTROL | Sony Mainboard | 5V via AHCT125 |
-| 1 | BLN | Sony → ESP32 | Sony Mainboard | ESP32-CONTROL | ~5V |
-
----
+--
 
 # Inter-Processor Communication
 
