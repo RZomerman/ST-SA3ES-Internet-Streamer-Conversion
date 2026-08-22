@@ -58,10 +58,10 @@ Sony Front Panel
 
 | Ref | Component | Purpose | Supply |
 |------|------|------|------|
-| J1 | to CN701 Front-Panel Side | Sony interface processor |  |
-| J2 | to CNP701 Mainboard Side | Sony interface processor |  |
-| J3 | to CN702 Front-Panel Side | Sony interface processor |  |
-| J4 | to CNP702 Mainboard Side | Sony interface processor |  |
+| J1 | to CN701 Front-Panel Side | Sony interface to front |  |
+| J2 | to CNP701 Mainboard Side | Sony interface to main |  |
+| J3 | to CN702 Front-Panel Side | Sony interface to front |  |
+| J4 | to CNP702 Mainboard Side | Sony interface to main |  |
 | J5 | SPDIF Output | Optical digital audio output | 5V |
 | U1 | ESP32-S3-CONTROL | Sony interface processor | 3.3V |
 | U2 | ESP32-S3-AUDIO | Audio streaming processor | 3.3V |
