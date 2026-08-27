@@ -8,6 +8,18 @@ The Controller briefly pulls `ST` and `AST` low when playback status becomes `tr
 
 The Radio implements a web server with a station list containing the frequency in MHz, station name, and URL without the `http` or `https` prefix. Incoming `FREQ` values are matched against that list. When a frequency is received, the Radio automatically sends its own IP address back over UART. Playback is sent through optical output on a configurable GPIO pin.
 
+## Web Interfaces
+
+The Controller is available over HTTP at its assigned IP address:
+
+- [Controller HTTP interface](http://<controller-ip>/)
+
+The Radio provides these HTTP endpoints:
+
+- [ESP32-radio V2.0](http://172.16.5.21/) - now-playing view and default Internet-radio interface
+- [Radio stations](http://172.16.5.21/stations) - radio-station list with MHz values and names
+- [Now-playing API](http://172.16.5.21/api/now-playing) - now-playing and status information
+
 ## Design Proposal v1.0
 
 ### Design Philosophy
