@@ -1,0 +1,41 @@
+menu "LC72130 network monitor"
+
+config LC72130_WIFI_SSID
+    string "Wi-Fi SSID"
+    default "Legomanhouse"
+
+config LC72130_WIFI_PASSWORD
+    string "Wi-Fi password"
+    default "barcelona"
+
+config LC72130_RADIO_UART_TX_GPIO
+    int "Radio ESP UART TX GPIO"
+    default 6
+    range 0 48
+
+config LC72130_RADIO_UART_RX_GPIO
+    int "Radio ESP UART RX GPIO"
+    default 5
+    range 0 48
+
+config LC72130_RADIO_UART_BAUD
+    int "Radio ESP UART baud rate"
+    default 115200
+
+config LC72130_OTA_TOKEN
+    string "OTA update shared secret token"
+    default "change-me-ota-token"
+    help
+        Required as the X-OTA-Token header on POST /api/ota. Change this from
+        the default before deploying on any shared network.
+
+config LC72130_RDS_UTC_OFFSET_HALF_HOURS
+    int "RDS Clock Time (4A) local UTC offset, in half-hour units"
+    default 4
+    range -28 28
+    help
+        Local time offset broadcast in the RDS Group 4A Clock Time field, in
+        units of 30 minutes. Default 4 = +2:00 (Europe/Spain CEST). Use 2 for
+        CET (+1:00) during winter, or adjust for another time zone.
+
+endmenu

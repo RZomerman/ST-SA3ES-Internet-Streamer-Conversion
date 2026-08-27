@@ -1,0 +1,10 @@
+CMake Error at run_serial_tool.cmake:55 (message):
+  
+  /home/r/.espressif/python_env/idf5.0_py3.12_env/bin/python;;/home/r/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3
+  failed
+
+
+make[3]: *** [CMakeFiles/flash.dir/build.make:70: CMakeFiles/flash] Error 1
+make[2]: *** [CMakeFiles/Makefile2:2264: CMakeFiles/flash.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:2271: CMakeFiles/flash.dir/rule] Error 2
+make: *** [Makefile:273: flash] Error 2

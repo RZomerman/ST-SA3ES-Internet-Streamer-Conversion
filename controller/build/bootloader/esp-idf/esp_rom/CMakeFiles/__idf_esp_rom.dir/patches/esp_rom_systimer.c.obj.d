@@ -1,0 +1,21 @@
+esp-idf/esp_rom/CMakeFiles/__idf_esp_rom.dir/patches/esp_rom_systimer.c.obj: \
+ /home/r/esp-idf/components/esp_rom/patches/esp_rom_systimer.c \
+ /home/r/esp32-lc72130-emulator/build/bootloader/config/sdkconfig.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/lib/gcc/xtensa-esp32s3-elf/11.2.0/include/stddef.h \
+ /home/r/esp-idf/components/hal/include/hal/systimer_hal.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/lib/gcc/xtensa-esp32s3-elf/11.2.0/include/stdint.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/stdint.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/machine/_default_types.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/features.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/_newlib_version.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/_intsup.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/_stdint.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/lib/gcc/xtensa-esp32s3-elf/11.2.0/include/stdbool.h \
+ /home/r/esp-idf/components/hal/include/hal/systimer_types.h \
+ /home/r/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h \
+ /home/r/esp-idf/components/soc/esp32s3/include/soc/ledc_caps.h \
+ /home/r/esp-idf/components/soc/esp32s3/include/soc/mpu_caps.h \
+ /home/r/esp-idf/components/soc/esp32s3/include/soc/twai_caps.h \
+ /home/r/esp-idf/components/hal/esp32s3/include/hal/systimer_ll.h \
+ /home/r/esp-idf/components/soc/esp32s3/include/soc/systimer_struct.h \
+ /home/r/esp-idf/components/hal/platform_port/include/hal/assert.h

@@ -1,0 +1,132 @@
+[  0%] Built target custom_bundle
+[  0%] Built target partition_table_bin
+[  0%] Built target _project_elf_src
+[  0%] Built target memory_ld
+[  0%] Performing build step for 'bootloader'
+[  0%] Built target __idf_ulp
+[  1%] Built target __idf_esp_https_ota
+[  1%] Built target _project_elf_src
+[  5%] Built target __idf_log
+[  2%] Built target __idf_esp_http_server
+[ 13%] Built target __idf_esp_rom
+[  2%] Built target __idf_esp_http_client
+[ 14%] Built target __idf_esp_common
+[  2%] Built target __idf_tcp_transport
+[ 24%] Built target __idf_esp_hw_support
+[ 26%] Built target __idf_esp_system
+[  2%] Built target __idf_esp_gdbstub
+[  2%] Built target __idf_esp_eth
+[ 35%] Built target __idf_efuse
+[  3%] Built target __idf_esp_adc
+[ 57%] Built target __idf_bootloader_support
+[  3%] Built target __idf_esp-tls
+[ 59%] Built target __idf_esp_app_format
+[  3%] Built target __idf_http_parser
+[ 64%] Built target __idf_hal
+[ 67%] Built target __idf_micro-ecc
+[  4%] Built target __idf_esp_wifi
+[ 90%] Built target __idf_soc
+[ 93%] Built target __idf_xtensa
+[ 95%] Built target __idf_main
+[ 98%] Built target bootloader.elf
+[100%] Built target gen_project_binary
+[ 13%] Built target __idf_wpa_supplicant
+[ 14%] Built target __idf_esp_netif
+Bootloader binary size 0x5060 bytes. 0x2fa0 bytes (37%) free.
+[100%] Built target bootloader_check_size
+[100%] Built target app
+[ 14%] No install step for 'bootloader'
+[ 15%] Completed 'bootloader'
+[ 15%] Built target bootloader
+[ 24%] Built target __idf_lwip
+[ 25%] Built target __idf_vfs
+[ 26%] Built target __idf_esp_phy
+[ 28%] Built target __idf_nvs_flash
+[ 29%] Built target __idf_esp_event
+[ 30%] Built target __idf_esp_timer
+[ 30%] Built target __idf_esp_common
+[ 30%] Built target __idf_cxx
+[ 31%] Built target __idf_newlib
+[ 33%] Built target __idf_freertos
+[ 36%] Built target __idf_esp_hw_support
+[ 39%] Built target __idf_soc
+[ 40%] Built target __idf_heap
+[ 41%] Built target __idf_log
+[ 47%] Built target __idf_hal
+[ 48%] Built target __idf_esp_rom
+[ 53%] Built target __idf_esp_system
+[ 54%] Built target __idf_pthread
+[ 57%] Built target __idf_spi_flash
+[ 58%] Built target __idf_app_update
+[ 58%] Built target __idf_esp_partition
+[ 59%] Built target __idf_bootloader_support
+[ 60%] Built target __idf_esp_app_format
+[ 62%] Built target mbedtls
+[ 63%] Built target mbedx509
+[ 73%] Built target mbedcrypto
+[ 74%] Built target __idf_mbedtls
+[ 74%] Built target __idf_esp_pm
+[ 80%] Built target __idf_driver
+[ 81%] Built target __idf_efuse
+[ 81%] Built target __idf_esp_ringbuf
+[ 81%] Built target __idf_xtensa
+[ 82%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[ 83%] Built target __idf_esp_hid
+[ 83%] Built target __idf_app_trace
+[ 86%] Built target __idf_protobuf-c
+[ 86%] Built target __idf_console
+[ 87%] Built target __idf_esp_lcd
+[ 88%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_cmd.c.obj
+[ 88%] Built target __idf_unity
+[ 89%] Built target __idf_espcoredump
+[ 90%] Built target __idf_wear_levelling
+[ 90%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lc72130_bus.c.obj
+[ 90%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_common.c.obj
+[ 90%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_init.c.obj
+[ 90%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lc72130_emulator.c.obj
+[ 90%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_io.c.obj
+[ 90%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_mmc.c.obj
+[ 90%] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON.c.obj
+[ 90%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/mqtt_client.c.obj
+[ 90%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[ 90%] Building C object esp-idf/json/CMakeFiles/__idf_json.dir/cJSON/cJSON_Utils.c.obj
+[ 90%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/event_log.c.obj
+[ 90%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[ 90%] Building C object esp-idf/sdmmc/CMakeFiles/__idf_sdmmc.dir/sdmmc_sd.c.obj
+[ 90%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[ 90%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/config.c.obj
+[ 91%] Building C object esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/touch_element.c.obj
+[ 91%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj
+[ 91%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[ 91%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[ 91%] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[ 91%] Building C object esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/touch_button.c.obj
+[ 91%] Linking C static library libperfmon.a
+[ 91%] Linking C static library libsdmmc.a
+[ 91%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_msg.c.obj
+[ 91%] Built target __idf_perfmon
+[ 91%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj
+[ 91%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[ 91%] Built target __idf_sdmmc
+[ 91%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/mqtt_outbox.c.obj
+[ 91%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj
+[ 91%] Building C object esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/touch_slider.c.obj
+[ 92%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[ 93%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj
+[ 93%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[ 93%] Linking C static library libjson.a
+[ 93%] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[ 93%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj
+[ 93%] Built target __idf_json
+[ 93%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj
+[ 93%] Building C object esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/touch_matrix.c.obj
+[ 93%] Building C object esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/esp-mqtt/lib/platform_esp32_idf.c.obj
+[ 93%] Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj
+[ 94%] Linking C static library libmqtt.a
+[ 94%] Linking C static library libtouch_element.a
+[ 94%] Built target __idf_mqtt
+[ 94%] Built target __idf_touch_element
+[ 94%] Linking C static library libusb.a
+[ 94%] Built target __idf_usb
+[ 94%] Linking C static library libspiffs.a
+[ 94%] Built target __idf_spiffs

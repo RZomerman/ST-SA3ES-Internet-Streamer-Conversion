@@ -1,0 +1,119 @@
+-- Project is not inside a git repository, or git repository has no commits; will not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+-- Project sdkconfig file /home/r/esp32-lc72130-emulator/sdkconfig
+Loading defaults file /home/r/esp32-lc72130-emulator/sdkconfig.defaults...
+/home/r/esp32-lc72130-emulator/sdkconfig.defaults:32 CONFIG_TASK_WDT_TIMEOUT_S was replaced with CONFIG_ESP_TASK_WDT_TIMEOUT_S
+-- App "lc72130_emulator" version: 1
+-- Adding linker script /home/r/esp32-lc72130-emulator/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/r/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script /home/r/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/r/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/r/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/r/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script /home/r/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/r/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_netif esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/r/esp-idf/components/app_trace /home/r/esp-idf/components/app_update /home/r/esp-idf/components/bootloader /home/r/esp-idf/components/bootloader_support /home/r/esp-idf/components/bt /home/r/esp-idf/components/cmock /home/r/esp-idf/components/console /home/r/esp-idf/components/cxx /home/r/esp-idf/components/driver /home/r/esp-idf/components/efuse /home/r/esp-idf/components/esp-tls /home/r/esp-idf/components/esp_adc /home/r/esp-idf/components/esp_app_format /home/r/esp-idf/components/esp_common /home/r/esp-idf/components/esp_eth /home/r/esp-idf/components/esp_event /home/r/esp-idf/components/esp_gdbstub /home/r/esp-idf/components/esp_hid /home/r/esp-idf/components/esp_http_client /home/r/esp-idf/components/esp_http_server /home/r/esp-idf/components/esp_https_ota /home/r/esp-idf/components/esp_https_server /home/r/esp-idf/components/esp_hw_support /home/r/esp-idf/components/esp_lcd /home/r/esp-idf/components/esp_local_ctrl /home/r/esp-idf/components/esp_netif /home/r/esp-idf/components/esp_partition /home/r/esp-idf/components/esp_phy /home/r/esp-idf/components/esp_pm /home/r/esp-idf/components/esp_psram /home/r/esp-idf/components/esp_ringbuf /home/r/esp-idf/components/esp_rom /home/r/esp-idf/components/esp_system /home/r/esp-idf/components/esp_timer /home/r/esp-idf/components/esp_wifi /home/r/esp-idf/components/espcoredump /home/r/esp-idf/components/esptool_py /home/r/esp-idf/components/fatfs /home/r/esp-idf/components/freertos /home/r/esp-idf/components/hal /home/r/esp-idf/components/heap /home/r/esp-idf/components/http_parser /home/r/esp-idf/components/idf_test /home/r/esp-idf/components/ieee802154 /home/r/esp-idf/components/json /home/r/esp-idf/components/log /home/r/esp-idf/components/lwip /home/r/esp32-lc72130-emulator/main /home/r/esp-idf/components/mbedtls /home/r/esp-idf/components/mqtt /home/r/esp-idf/components/newlib /home/r/esp-idf/components/nvs_flash /home/r/esp-idf/components/openthread /home/r/esp-idf/components/partition_table /home/r/esp-idf/components/perfmon /home/r/esp-idf/components/protobuf-c /home/r/esp-idf/components/protocomm /home/r/esp-idf/components/pthread /home/r/esp-idf/components/sdmmc /home/r/esp-idf/components/soc /home/r/esp-idf/components/spi_flash /home/r/esp-idf/components/spiffs /home/r/esp-idf/components/tcp_transport /home/r/esp-idf/components/touch_element /home/r/esp-idf/components/ulp /home/r/esp-idf/components/unity /home/r/esp-idf/components/usb /home/r/esp-idf/components/vfs /home/r/esp-idf/components/wear_levelling /home/r/esp-idf/components/wifi_provisioning /home/r/esp-idf/components/wpa_supplicant /home/r/esp-idf/components/xtensa
+-- Configuring done (2.0s)
+-- Generating done (0.6s)
+-- Build files have been written to: /home/r/esp32-lc72130-emulator/build
+[  0%] Built target custom_bundle
+[  0%] Built target _project_elf_src
+[  0%] Built target memory_ld
+[  0%] Built target partition_table_bin
+[  0%] Built target blank_ota_data
+[  0%] Performing build step for 'bootloader'
+[  0%] Built target __idf_ulp
+[  0%] Built target __idf_esp_https_ota
+[  1%] Built target _project_elf_src
+[  5%] Built target __idf_log
+[ 13%] Built target __idf_esp_rom
+[  1%] Built target __idf_esp_http_server
+[ 14%] Built target __idf_esp_common
+[  1%] Built target __idf_esp_http_client
+[ 24%] Built target __idf_esp_hw_support
+[  1%] Built target __idf_tcp_transport
+[ 26%] Built target __idf_esp_system
+[ 35%] Built target __idf_efuse
+[  2%] Built target __idf_esp_gdbstub
+[  2%] Built target __idf_esp_eth
+[ 57%] Built target __idf_bootloader_support
+[ 59%] Built target __idf_esp_app_format
+[  3%] Built target __idf_esp_adc
+[ 64%] Built target __idf_hal
+[ 67%] Built target __idf_micro-ecc
+[  3%] Built target __idf_esp-tls
+[  3%] Built target __idf_http_parser
+[ 90%] Built target __idf_soc
+[ 93%] Built target __idf_xtensa
+[  4%] Built target __idf_esp_wifi
+[ 95%] Built target __idf_main
+[ 98%] Built target bootloader.elf
+[100%] Built target gen_project_binary
+Bootloader binary size 0x5060 bytes. 0x2fa0 bytes (37%) free.
+[100%] Built target bootloader_check_size
+[100%] Built target app
+[ 13%] Built target __idf_wpa_supplicant
+[ 13%] No install step for 'bootloader'
+[ 14%] Completed 'bootloader'
+[ 15%] Built target __idf_esp_netif
+[ 15%] Built target bootloader
+[ 25%] Built target __idf_lwip
+[ 26%] Built target __idf_vfs
+[ 26%] Built target __idf_esp_phy
+[ 27%] Built target __idf_nvs_flash
+[ 27%] Built target __idf_esp_event
+[ 28%] Built target __idf_esp_timer
+[ 29%] Built target __idf_esp_common
+[ 29%] Built target __idf_cxx
+[ 31%] Built target __idf_newlib
+[ 33%] Built target __idf_freertos
+[ 37%] Built target __idf_esp_hw_support
+[ 39%] Built target __idf_soc
+[ 40%] Built target __idf_heap
+[ 40%] Built target __idf_log
+[ 45%] Built target __idf_hal
+[ 46%] Built target __idf_esp_rom
+[ 51%] Built target __idf_esp_system
+[ 52%] Built target __idf_pthread
+[ 55%] Built target __idf_spi_flash
+[ 55%] Built target __idf_app_update
+[ 55%] Built target __idf_esp_partition
+[ 57%] Built target __idf_bootloader_support
+[ 57%] Built target __idf_esp_app_format
+[ 59%] Built target mbedtls
+[ 60%] Built target mbedx509
+[ 70%] Built target mbedcrypto
+[ 70%] Built target __idf_mbedtls
+[ 71%] Built target __idf_esp_pm
+[ 77%] Built target __idf_driver
+[ 78%] Built target __idf_efuse
+[ 78%] Built target __idf_esp_ringbuf
+[ 78%] Built target __idf_xtensa
+[ 79%] Built target __idf_protobuf-c
+[ 80%] Built target __idf_json
+[ 81%] Built target __idf_esp_lcd
+[ 82%] Built target __idf_wear_levelling
+[ 83%] Built target __idf_esp_hid
+[ 83%] Built target __idf_app_trace
+[ 84%] Built target __idf_unity
+[ 86%] Built target __idf_console
+[ 87%] Built target __idf_espcoredump
+[ 88%] Built target __idf_sdmmc
+[ 89%] Built target __idf_mqtt
+[ 90%] Built target __idf_cmock
+[ 90%] Built target __idf_perfmon
+[ 91%] Built target __idf_touch_element
+[ 92%] Built target __idf_spiffs
+[ 93%] Built target __idf_usb
+[ 94%] Built target __idf_protocomm
+[ 94%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_monitor.c.obj
+[ 94%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lc72130_emulator.c.obj
+[ 94%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[ 94%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/radio_metadata_poll.c.obj
+[ 94%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/radio_link.c.obj
+[ 95%] Built target __idf_fatfs
+[ 95%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/rds_output.c.obj
+[ 95%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/rds_clock.c.obj
+[ 96%] Built target __idf_esp_local_ctrl
+[ 97%] Built target __idf_wifi_provisioning

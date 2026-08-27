@@ -1,0 +1,10 @@
+CMake Error at /home/r/esp-idf/tools/cmake/build.cmake:245 (message):
+  Failed to resolve component 'esp_driver_gptimer'.
+Call Stack (most recent call first):
+  /home/r/esp-idf/tools/cmake/build.cmake:281 (__build_resolve_and_add_req)
+  /home/r/esp-idf/tools/cmake/build.cmake:574 (__build_expand_requirements)
+  /home/r/esp-idf/tools/cmake/project.cmake:440 (idf_build_process)
+  CMakeLists.txt:5 (project)
+
+
+make: *** [Makefile:1740: cmake_check_build_system] Error 1

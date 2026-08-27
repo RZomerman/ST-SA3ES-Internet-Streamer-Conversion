@@ -1,0 +1,112 @@
+[  0%] Built target partition_table_bin
+[  0%] Built target custom_bundle
+[  0%] Built target memory_ld
+[  1%] Built target _project_elf_src
+[  1%] Performing build step for 'bootloader'
+[  1%] Built target __idf_ulp
+[  1%] Built target __idf_esp_https_ota
+[  1%] Built target _project_elf_src
+[  5%] Built target __idf_log
+[  2%] Built target __idf_esp_http_server
+[ 13%] Built target __idf_esp_rom
+[  2%] Built target __idf_esp_http_client
+[ 14%] Built target __idf_esp_common
+[  3%] Built target __idf_tcp_transport
+[ 24%] Built target __idf_esp_hw_support
+[  3%] Built target __idf_esp_gdbstub
+[ 26%] Built target __idf_esp_system
+[  3%] Built target __idf_esp_eth
+[ 35%] Built target __idf_efuse
+[  4%] Built target __idf_esp_adc
+[ 57%] Built target __idf_bootloader_support
+[  4%] Built target __idf_esp-tls
+[ 59%] Built target __idf_esp_app_format
+[  4%] Built target __idf_http_parser
+[ 64%] Built target __idf_hal
+[  5%] Built target __idf_esp_wifi
+[ 67%] Built target __idf_micro-ecc
+[ 90%] Built target __idf_soc
+[ 93%] Built target __idf_xtensa
+[ 95%] Built target __idf_main
+[ 14%] Built target __idf_wpa_supplicant
+[ 98%] Built target bootloader.elf
+[ 15%] Built target __idf_esp_netif
+[100%] Built target gen_project_binary
+[ 24%] Built target __idf_lwip
+Bootloader binary size 0x5060 bytes. 0x2fa0 bytes (37%) free.
+[100%] Built target bootloader_check_size
+[ 25%] Built target __idf_vfs
+[100%] Built target app
+[ 26%] Built target __idf_esp_phy
+[ 26%] No install step for 'bootloader'
+[ 26%] Completed 'bootloader'
+[ 27%] Built target __idf_nvs_flash
+[ 27%] Built target bootloader
+[ 28%] Built target __idf_esp_event
+[ 29%] Built target __idf_esp_timer
+[ 30%] Built target __idf_esp_common
+[ 30%] Built target __idf_cxx
+[ 32%] Built target __idf_newlib
+[ 34%] Built target __idf_freertos
+[ 38%] Built target __idf_esp_hw_support
+[ 41%] Built target __idf_soc
+[ 42%] Built target __idf_heap
+[ 43%] Built target __idf_log
+[ 50%] Built target __idf_hal
+[ 51%] Built target __idf_esp_rom
+[ 55%] Built target __idf_esp_system
+[ 56%] Built target __idf_pthread
+[ 58%] Built target __idf_spi_flash
+[ 59%] Built target __idf_app_update
+[ 59%] Built target __idf_esp_partition
+[ 60%] Built target __idf_bootloader_support
+[ 60%] Built target __idf_esp_app_format
+[ 62%] Built target mbedtls
+[ 63%] Built target mbedx509
+[ 73%] Built target mbedcrypto
+[ 73%] Built target __idf_mbedtls
+[ 73%] Built target __idf_esp_pm
+[ 79%] Built target __idf_driver
+[ 80%] Built target __idf_efuse
+[ 80%] Built target __idf_esp_ringbuf
+[ 80%] Built target __idf_xtensa
+[ 80%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[ 80%] Built target __idf_app_trace
+[ 81%] Built target __idf_esp_hid
+[ 83%] Built target __idf_console
+[ 84%] Built target __idf_esp_lcd
+[ 85%] Built target __idf_unity
+[ 86%] Built target __idf_protobuf-c
+[ 86%] Built target __idf_espcoredump
+[ 87%] Built target __idf_sdmmc
+[ 87%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lc72130_emulator.c.obj
+[ 87%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/wifi_monitor.c.obj
+[ 88%] Built target __idf_wear_levelling
+[ 88%] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/radio_link.c.obj
+[ 89%] Built target __idf_mqtt
+[ 89%] Built target __idf_json
+[ 90%] Built target __idf_spiffs
+[ 92%] Built target __idf_perfmon
+[ 92%] Built target __idf_usb
+[ 92%] Built target __idf_touch_element
+[ 93%] Built target __idf_cmock
+[ 94%] Built target __idf_protocomm
+[ 95%] Built target __idf_fatfs
+[ 96%] Built target __idf_esp_local_ctrl
+[ 97%] Built target __idf_wifi_provisioning
+[ 98%] Linking C static library libmain.a
+[100%] Built target __idf_main
+[100%] Generating ld/sections.ld
+[100%] Built target __ldgen_output_sections.ld
+[100%] Linking CXX executable lc72130_emulator.elf
+[100%] Built target lc72130_emulator.elf
+[100%] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/r/esp32-lc72130-emulator/build/lc72130_emulator.bin
+[100%] Built target gen_project_binary
+lc72130_emulator.bin binary size 0xc1f90 bytes. Smallest app partition is 0x100000 bytes. 0x3e070 bytes (24%) free.
+[100%] Built target app_check_size
+[100%] Built target app

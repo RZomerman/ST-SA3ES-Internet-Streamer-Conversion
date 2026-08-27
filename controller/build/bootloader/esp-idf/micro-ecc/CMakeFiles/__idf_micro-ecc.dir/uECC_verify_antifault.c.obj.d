@@ -1,0 +1,15 @@
+esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj: \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/uECC_verify_antifault.c \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/uECC.c \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/uECC.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/lib/gcc/xtensa-esp32s3-elf/11.2.0/include/stdint.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/stdint.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/machine/_default_types.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/features.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/_newlib_version.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/_intsup.h \
+ /home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/xtensa-esp32s3-elf/sys-include/sys/_stdint.h \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/uECC_vli.h \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/types.h \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/platform-specific.inc \
+ /home/r/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/curve-specific.inc

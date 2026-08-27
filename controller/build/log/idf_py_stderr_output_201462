@@ -1,0 +1,69 @@
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c: In function 'lc72130_decoder_divider_to_frequency':
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:40:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   40 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                 ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:40:50: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   40 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                                                  ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c: In function 'lc72130_decoder_divider_to_frame':
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:84:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   84 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                 ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:84:50: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   84 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                                                  ^
+/home/r/esp32-lc72130-emulator/main/event_log.c: In function 'log_event_to_serial':
+/home/r/esp32-lc72130-emulator/main/event_log.c:34:25: error: type defaults to 'int' in declaration of 'f' [-Werror=implicit-int]
+   34 |             const auto *f = &event->data.frame_data;
+      |                         ^
+/home/r/esp32-lc72130-emulator/main/event_log.c:34:29: warning: initialization of 'const int *' from incompatible pointer type 'const struct <anonymous> *' [-Wincompatible-pointer-types]
+   34 |             const auto *f = &event->data.frame_data;
+      |                             ^
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:36: error: request for member 'byte0' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                    ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:46: error: request for member 'byte1' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                              ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:56: error: request for member 'byte2' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                                        ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:66: error: request for member 'divider' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                                                  ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:78: error: request for member 'frequency_mhz' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                                                              ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:36:96: error: request for member 'control_byte' in something not a structure or union
+   36 |                    timestamp_str, f->byte0, f->byte1, f->byte2, f->divider, f->frequency_mhz, f->control_byte);
+      |                                                                                                ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:46:57: error: format '%X' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Werror=format=]
+   46 |             printf("%sD-IN RESPONSE: 0x%02X (bits: 0x%08X)\n", timestamp_str,
+      |                                                      ~~~^
+      |                                                         |
+      |                                                         unsigned int
+      |                                                      %08lX
+   47 |                    event->data.din_response.response_byte, event->data.din_response.bit_pattern);
+      |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                                    |
+      |                                                                                    uint32_t {aka long unsigned int}
+/home/r/esp32-lc72130-emulator/main/event_log.c:50:25: error: type defaults to 'int' in declaration of 's' [-Werror=implicit-int]
+   50 |             const auto *s = &event->data.state_change;
+      |                         ^
+/home/r/esp32-lc72130-emulator/main/event_log.c:50:29: warning: initialization of 'const int *' from incompatible pointer type 'const struct <anonymous> *' [-Wincompatible-pointer-types]
+   50 |             const auto *s = &event->data.state_change;
+      |                             ^
+/home/r/esp32-lc72130-emulator/main/event_log.c:52:36: error: request for member 'state_id' in something not a structure or union
+   52 |                    timestamp_str, s->state_id, s->old_value, s->new_value);
+      |                                    ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:52:49: error: request for member 'old_value' in something not a structure or union
+   52 |                    timestamp_str, s->state_id, s->old_value, s->new_value);
+      |                                                 ^~
+/home/r/esp32-lc72130-emulator/main/event_log.c:52:63: error: request for member 'new_value' in something not a structure or union
+   52 |                    timestamp_str, s->state_id, s->old_value, s->new_value);
+      |                                                               ^~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:149: esp-idf/main/CMakeFiles/__idf_main.dir/event_log.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5550: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

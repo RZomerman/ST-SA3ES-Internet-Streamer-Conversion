@@ -1,0 +1,26 @@
+In file included from /home/r/esp32-lc72130-emulator/main/config.c:6:
+/home/r/esp32-lc72130-emulator/main/include/config.h:163:1: error: unknown type name 'esp_err_t'
+  163 | esp_err_t config_init(void);
+      | ^~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/config.c:20:1: error: unknown type name 'esp_err_t'
+   20 | esp_err_t config_init(void)
+      | ^~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/config.c: In function 'config_init':
+/home/r/esp32-lc72130-emulator/main/config.c:27:12: error: 'ESP_OK' undeclared (first use in this function); did you mean 'ESP_LOGD'?
+   27 |     return ESP_OK;
+      |            ^~~~~~
+      |            ESP_LOGD
+/home/r/esp32-lc72130-emulator/main/config.c:27:12: note: each undeclared identifier is reported only once for each function it appears in
+/home/r/esp32-lc72130-emulator/main/config.c:28:1: error: control reaches end of non-void function [-Werror=return-type]
+   28 | }
+      | ^
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:163: esp-idf/main/CMakeFiles/__idf_main.dir/config.c.obj] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/home/r/esp32-lc72130-emulator/main/event_log.c: In function 'log_event_to_serial':
+/home/r/esp32-lc72130-emulator/main/event_log.c:35:125: warning: initialization of 'const struct <anonymous> *' from incompatible pointer type 'const struct <anonymous> *' [-Wincompatible-pointer-types]
+   35 |             const struct { uint8_t byte0, byte1, byte2; uint32_t divider; float frequency_mhz; uint8_t control_byte; } *f = &event->data.frame_data;
+      |                                                                                                                             ^
+make[1]: *** [CMakeFiles/Makefile2:5550: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

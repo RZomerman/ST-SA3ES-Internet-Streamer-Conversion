@@ -1,0 +1,2 @@
+/home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ar qc libesp_https_ota.a CMakeFiles/__idf_esp_https_ota.dir/src/esp_https_ota.c.obj
+/home/r/.espressif/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-ranlib libesp_https_ota.a

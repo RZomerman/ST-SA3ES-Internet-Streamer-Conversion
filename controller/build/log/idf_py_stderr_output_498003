@@ -1,0 +1,22 @@
+CMake Warning (deprecated) at /home/r/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:21 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+In file included from /home/r/esp32-lc72130-emulator/main/rds_clock.c:1:
+/home/r/esp32-lc72130-emulator/main/include/rds_clock.h:30:45: error: unknown type name 'size_t'
+   30 | bool rds_clock_get_utc_string(char *buffer, size_t size);
+      |                                             ^~~~~~
+/home/r/esp32-lc72130-emulator/main/include/rds_clock.h:6:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+    5 | #include <stdint.h>
+  +++ |+#include <stddef.h>
+    6 | 
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:233: esp-idf/main/CMakeFiles/__idf_main.dir/rds_clock.c.obj] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:5786: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

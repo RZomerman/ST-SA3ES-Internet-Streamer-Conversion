@@ -1,0 +1,54 @@
+CMake Warning (deprecated) at /home/r/esp-idf/components/mbedtls/mbedtls/CMakeLists.txt:21 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c: In function 'lc72130_decoder_divider_to_frequency':
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:40:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   40 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                 ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:40:50: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   40 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                                                  ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c: In function 'lc72130_decoder_divider_to_frame':
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:84:17: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   84 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                 ^
+/home/r/esp32-lc72130-emulator/main/lc72130_decoder.c:84:50: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+   84 |     if (divider < LC72130_MIN_DIVIDER || divider > LC72130_MAX_DIVIDER) {
+      |                                                  ^
+/home/r/esp32-lc72130-emulator/main/event_log.c: In function 'log_event_to_serial':
+/home/r/esp32-lc72130-emulator/main/event_log.c:35:125: warning: initialization of 'const struct <anonymous> *' from incompatible pointer type 'const struct <anonymous> *' [-Wincompatible-pointer-types]
+   35 |             const struct { uint8_t byte0, byte1, byte2; uint32_t divider; float frequency_mhz; uint8_t control_byte; } *f = &event->data.frame_data;
+      |                                                                                                                             ^
+/home/r/esp32-lc72130-emulator/main/rds_output.c:28:8: error: unknown type name 'portMUX_TYPE'
+   28 | static portMUX_TYPE stream_lock = portMUX_INITIALIZER_UNLOCKED;
+      |        ^~~~~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/rds_output.c:28:35: error: 'portMUX_INITIALIZER_UNLOCKED' undeclared here (not in a function)
+   28 | static portMUX_TYPE stream_lock = portMUX_INITIALIZER_UNLOCKED;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/rds_output.c:123:23: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'timer_callback'
+  123 | static bool IRAM_ATTR timer_callback(gptimer_handle_t timer_handle,
+      |                       ^~~~~~~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/rds_output.c: In function 'rds_output_init':
+/home/r/esp32-lc72130-emulator/main/rds_output.c:168:56: error: 'timer_callback' undeclared (first use in this function)
+  168 |     gptimer_event_callbacks_t callbacks = {.on_alarm = timer_callback};
+      |                                                        ^~~~~~~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/rds_output.c:168:56: note: each undeclared identifier is reported only once for each function it appears in
+/home/r/esp32-lc72130-emulator/main/rds_output.c: In function 'rds_output_update':
+/home/r/esp32-lc72130-emulator/main/rds_output.c:197:5: error: implicit declaration of function 'portENTER_CRITICAL' [-Werror=implicit-function-declaration]
+  197 |     portENTER_CRITICAL(&stream_lock);
+      |     ^~~~~~~~~~~~~~~~~~
+/home/r/esp32-lc72130-emulator/main/rds_output.c:199:5: error: implicit declaration of function 'portEXIT_CRITICAL' [-Werror=implicit-function-declaration]
+  199 |     portEXIT_CRITICAL(&stream_lock);
+      |     ^~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:205: esp-idf/main/CMakeFiles/__idf_main.dir/rds_output.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5550: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:136: all] Error 2

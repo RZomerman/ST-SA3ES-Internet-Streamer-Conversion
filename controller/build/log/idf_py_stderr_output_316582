@@ -1,0 +1,4 @@
+/home/r/esp32-lc72130-emulator/main/event_log.c: In function 'log_event_to_serial':
+/home/r/esp32-lc72130-emulator/main/event_log.c:35:125: warning: initialization of 'const struct <anonymous> *' from incompatible pointer type 'const struct <anonymous> *' [-Wincompatible-pointer-types]
+   35 |             const struct { uint8_t byte0, byte1, byte2; uint32_t divider; float frequency_mhz; uint8_t control_byte; } *f = &event->data.frame_data;
+      |                                                                                                                             ^
