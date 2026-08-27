@@ -1,0 +1,21 @@
+menu "Internet radio configuration"
+
+    config RADIO_WIFI_SSID
+        string "Wi-Fi SSID"
+        default ""
+        help
+            SSID used by the Internet radio. Configure this locally with
+            menuconfig; do not commit generated sdkconfig files.
+
+    config RADIO_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default ""
+        help
+            Password used by the Internet radio. It is never written to logs.
+
+    config RADIO_WIFI_MAX_BACKOFF_SECONDS
+        int "Maximum Wi-Fi reconnect delay (seconds)"
+        range 1 300
+        default 30
+
+endmenu
