@@ -1,0 +1,28 @@
+menu "Radio controller UART"
+
+config RADIO_CONTROLLER_UART_RX_GPIO
+    int "Radio ESP UART RX GPIO"
+    range 0 48
+    default 40
+    help
+        Receives controller GPIO6 (TX). GPIO40 is free on the ESP32-S3 N16R8
+        radio board configuration.
+
+config RADIO_CONTROLLER_UART_TX_GPIO
+    int "Radio ESP UART TX GPIO"
+    range 0 48
+    default 41
+    help
+        Transmits to controller GPIO5 (RX). GPIO41 is free on the ESP32-S3
+        N16R8 radio board configuration.
+
+config RADIO_CONTROLLER_AUDIO_RDY_GPIO
+    int "Radio ESP AUDIO_RDY GPIO"
+    range 0 48
+    default 42
+    help
+        Active-high output to the controller. It remains low during application
+        initialization and rises after idle service is ready and the initial
+        UART status snapshot has been transmitted.
+
+endmenu

@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^& \"\\$env:USERPROFILE\\\\\\.platformio\\\\penv\\\\Scripts\\\\pio\\.exe\" run -e esp32-s3-n16r8$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

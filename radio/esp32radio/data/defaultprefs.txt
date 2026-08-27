@@ -1,0 +1,34 @@
+# Example configuration
+# Local buttons and selectors are disabled.
+#
+# Battery monitor
+batt100 = 2950
+batt0 = 2600 
+# MQTT settings
+mqttbroker = none
+mqttport = 1883
+mqttuser = none
+mqttpasswd = none
+mqttprefix = none
+# Enter your WiFi network specs here:
+wifi_00 = StudioGraphic/HappyWifeHappyLife
+#
+volume = 72
+toneha = 0
+tonehf = 0
+tonela = 0
+tonelf = 0
+#
+preset = 0
+preset_00 = playerservices.streamtheworld.com:80/api/livestream-redirect/RADIO538AAC.aac # RADIO538
+#
+# Clock offset and daylight saving time
+clk_server = pool.ntp.org                            # Time server to be used
+clk_offset = 1                                       # Offset with respect to UTC in hours
+clk_dst = 1                                          # Offset during daylight saving time (hours)
+# Some example IR codes
+ir_40BF = upvolume = 2
+ir_C03F = downvolume = 2
+# GPIO pinnings
+# TOSLINK transmitter input. GPIO5/6 are reserved for RDS-C/RDS-D.
+pin_i2s_spdif = 15                                   # GPIO Pin number for I2S/SPDIF
