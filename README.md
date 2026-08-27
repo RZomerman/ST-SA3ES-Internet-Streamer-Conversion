@@ -1,5 +1,13 @@
 # Sony ST-SA3ES Internet Tuner Replacement Project
 
+## Implemented Controller and Radio
+
+The Controller has been implemented to receive `CE`, `CLK`, and `DATA` from the Sony bus. It is responsible for sending `D-IN`, `ST`, `AST`, `SI`, `RDS-C`, and `RDS-D` back to the tuner. The Controller includes a test system that sends `FREQ:` messages to the Radio ESP and expects the Radio ESP to return its IP address. It then reads station and status information from `ip/api/now-playing` and uses that data to create the RDS information.
+
+The Controller briefly pulls `ST` and `AST` low when playback status becomes `true`. It holds `SI` at 3.3 V and briefly pulls it low when the frequency changes.
+
+The Radio implements a web server with a station list containing the frequency in MHz, station name, and URL without the `http` or `https` prefix. Incoming `FREQ` values are matched against that list. When a frequency is received, the Radio automatically sends its own IP address back over UART. Playback is sent through optical output on a configurable GPIO pin.
+
 ## Design Proposal v1.0
 
 ### Design Philosophy
