@@ -1,5 +1,12 @@
 # Sony ST-SA3ES ESP32 RDS Injection Final Specification
 
+> Later live-installation findings are documented in
+> [Live injection bench findings](Live%20injection%20bench%20findings.md).
+> In particular, AST must be LOW for the confirmed text-display case, and
+> current RadioText uses two spaces followed by the `0x0D` end marker rather
+> than displaying the full space-padded field. The Hello World specification
+> below is retained as the historical prototype.
+
 # 13. Final prototype scope
 
 This prototype replaces only the recovered RDS clock and data presented to the Sony controller. The FM tuner and received audio remain operational. The ESP32 does not create an FM multiplex signal and does not generate a 57 kHz RDS subcarrier.

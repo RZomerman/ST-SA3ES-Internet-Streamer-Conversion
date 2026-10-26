@@ -4,6 +4,12 @@ Markdown conversion of `Sony_ST-SA3ES_ESP32_RDS_Injection_Final_Spec_Rev2_0.docx
 
 ## Files
 
+Current bench update:
+[`Live injection bench findings.md`](Live%20injection%20bench%20findings.md)
+records confirmed active-low AST behavior, the deployed GPIO mapping,
+RadioText end-of-text handling, web controls, and remaining EON uncertainties.
+It supplements the historical prototype documents below.
+
 1. [`01_RDS_Interface_and_Decoding_Evidence.md`](01_RDS_Interface_and_Decoding_Evidence.md)  
    Physical interface, capture method, RDS framing, decoded groups, and verified/open findings.
 
